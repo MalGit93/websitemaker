@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "name": "Northstar Outdoor Co.",
+    "tagline": "Gear Up. Get Outside. Stay Longer.",
+    "mission": "We design durable, repairable outdoor gear that helps more people enjoy trails, parks, and backcountry safely.",
+    "positioning": "Premium-performance outdoor essentials at fair, transparent pricing.",
+    "voice": ["Practical", "Confident", "Welcoming", "Field-tested"],
+    "colors": [
+      {"name": "Pine", "hex": "#1E4D3A", "usage": "Primary brand color, headings, buttons"},
+      {"name": "Sky", "hex": "#1F6FEB", "usage": "Links, highlights, callouts"},
+      {"name": "Sand", "hex": "#F3E9D2", "usage": "Backgrounds, section cards"},
+      {"name": "Slate", "hex": "#334155", "usage": "Body text, borders"},
+      {"name": "Sunrise", "hex": "#F59E0B", "usage": "Accents, badges, offers"}
+    ],
+    "typography": {
+      "display": "Sora, Inter, system-ui",
+      "body": "Inter, system-ui, -apple-system"
+    }
+  },
+  "metrics": {
+    "customers_served": 18420,
+    "five_star_reviews": 4126,
+    "average_rating": 4.8,
+    "returned_for_repair_percent": 2.1,
+    "co2_saved_kg": 76800,
+    "parks_supported": 23
+  },
+  "products": [
+    {
+      "name": "RidgeLine 42L Pack",
+      "category": "Backpacks",
+      "price_usd": 169,
+      "description": "Weather-resistant day-to-weekend pack with ventilated frame and modular pockets.",
+      "best_for": "Hiking, travel, fast overnights"
+    },
+    {
+      "name": "SummitShell Rain Jacket",
+      "category": "Outerwear",
+      "price_usd": 139,
+      "description": "3-layer recycled nylon shell with pit zips and helmet-compatible hood.",
+      "best_for": "Wet weather hikes, city commuting"
+    },
+    {
+      "name": "TrailForge Trek Poles",
+      "category": "Accessories",
+      "price_usd": 89,
+      "description": "Carbon-aluminum blend poles with quick-lock adjusters and cork grips.",
+      "best_for": "Steep ascents and long descents"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "The RidgeLine pack replaced two bags for me. It survived rain, rocks, and airport chaos.",
+      "name": "Maya R.",
+      "title": "Weekend backpacker"
+    },
+    {
+      "quote": "I bought the SummitShell for spring storms and now wear it daily. It breathes better than expected.",
+      "name": "Jordan T.",
+      "title": "Trail volunteer"
+    }
+  ],
+  "locations": [
+    {
+      "city": "Denver, CO",
+      "type": "Flagship store",
+      "hours": "Mon-Sat 10am-7pm"
+    },
+    {
+      "city": "Seattle, WA",
+      "type": "Repair + pickup hub",
+      "hours": "Tue-Sun 11am-6pm"
+    }
+  ],
+  "contact": {
+    "email": "hello@northstaroutdoor.co",
+    "phone": "+1 (303) 555-0142",
+    "address": "218 Canyon Ave, Denver, CO 80202"
+  }
+}

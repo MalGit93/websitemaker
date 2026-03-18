@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Outdoor Co. | Brand + Launch Page</title>
+    <style>
+      :root {
+        --pine: #1e4d3a;
+        --sky: #1f6feb;
+        --sand: #f3e9d2;
+        --slate: #334155;
+        --sunrise: #f59e0b;
+        --bg: #f8fafc;
+        --white: #ffffff;
+        --border: #dbe3ec;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--slate);
+        background: var(--bg);
+        line-height: 1.5;
+      }
+
+      .container {
+        width: min(1100px, 92%);
+        margin: 0 auto;
+      }
+
+      header {
+        background: linear-gradient(140deg, var(--pine), #17382b);
+        color: var(--white);
+        padding: 4rem 0 3.5rem;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.15);
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+      }
+
+      h1, h2, h3 { margin-top: 0; }
+      h1 {
+        font-family: Sora, Inter, system-ui, sans-serif;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-grid,
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+      }
+
+      section { padding: 2.5rem 0; }
+
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1rem;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--pine);
+      }
+
+      .palette {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      }
+
+      .swatch {
+        height: 54px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        margin-bottom: 0.5rem;
+      }
+
+      .products,
+      .testimonials,
+      .locations {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .cta {
+        background: var(--sand);
+        border-radius: 16px;
+        padding: 1.25rem;
+        border: 1px solid #eadfbe;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 0.8rem;
+        padding: 0.65rem 1rem;
+        border-radius: 10px;
+        background: var(--sky);
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        color: #64748b;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 860px) {
+        .hero-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">New Version · Real Brand Page</span>
+          <h1 id="brand-name">Loading brand...</h1>
+          <p id="tagline"></p>
+          <p id="mission"></p>
+        </div>
+        <div class="card">
+          <h3>Brand Positioning</h3>
+          <p id="positioning"></p>
+          <h3>Brand Voice</h3>
+          <ul id="voice"></ul>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <h2>Performance Snapshot</h2>
+        <div class="grid metrics" id="metrics"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Style Guide</h2>
+        <div class="grid palette" id="palette"></div>
+        <div class="grid" style="margin-top: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="card">
+            <h3>Typography</h3>
+            <p><strong>Display:</strong> <span id="display-font"></span></p>
+            <p><strong>Body:</strong> <span id="body-font"></span></p>
+          </div>
+          <div class="card">
+            <h3>Messaging Rules</h3>
+            <ul>
+              <li>Lead with practical benefits and clear use-cases.</li>
+              <li>Use field-tested proof (ratings, returns, durability).</li>
+              <li>Keep voice confident and welcoming, not elitist.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Products</h2>
+        <div class="grid products" id="products"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Customer Proof</h2>
+        <div class="grid testimonials" id="testimonials"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Stores & Service</h2>
+        <div class="grid locations" id="locations"></div>
+        <div class="cta" style="margin-top: 1rem;">
+          <h3>Ready to launch this as the official homepage?</h3>
+          <p id="contact"></p>
+          <a class="btn" href="#">Request Brand Assets</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">Built as a production-ready brand + content baseline from your original concept.</div>
+    </footer>
+
+    <script>
+      const fmt = new Intl.NumberFormat('en-US');
+
+      fetch('./data/company-data.json')
+        .then((r) => r.json())
+        .then((data) => {
+          const { brand, metrics, products, testimonials, locations, contact } = data;
+
+          document.getElementById('brand-name').textContent = brand.name;
+          document.getElementById('tagline').textContent = brand.tagline;
+          document.getElementById('mission').textContent = brand.mission;
+          document.getElementById('positioning').textContent = brand.positioning;
+          document.getElementById('voice').innerHTML = brand.voice.map((v) => `<li>${v}</li>`).join('');
+
+          const metricItems = [
+            ['Customers served', fmt.format(metrics.customers_served)],
+            ['5-star reviews', fmt.format(metrics.five_star_reviews)],
+            ['Average rating', `${metrics.average_rating} / 5`],
+            ['Repair return rate', `${metrics.returned_for_repair_percent}%`],
+            ['CO₂ saved', `${fmt.format(metrics.co2_saved_kg)} kg`],
+            ['Parks supported', fmt.format(metrics.parks_supported)]
+          ];
+
+          document.getElementById('metrics').innerHTML = metricItems
+            .map(([label, value]) => `<div class="card metric"><strong>${value}</strong><span>${label}</span></div>`)
+            .join('');
+
+          document.getElementById('palette').innerHTML = brand.colors
+            .map((c) => `
+              <div class="card">
+                <div class="swatch" style="background:${c.hex}"></div>
+                <strong>${c.name}</strong>
+                <div>${c.hex}</div>
+                <small>${c.usage}</small>
+              </div>`)
+            .join('');
+
+          document.getElementById('display-font').textContent = brand.typography.display;
+          document.getElementById('body-font').textContent = brand.typography.body;
+
+          document.getElementById('products').innerHTML = products
+            .map((p) => `
+              <article class="card">
+                <h3>${p.name}</h3>
+                <p><strong>${p.category}</strong> · $${p.price_usd}</p>
+                <p>${p.description}</p>
+                <small>Best for: ${p.best_for}</small>
+              </article>`)
+            .join('');
+
+          document.getElementById('testimonials').innerHTML = testimonials
+            .map((t) => `
+              <blockquote class="card">
+                <p>“${t.quote}”</p>
+                <footer><strong>${t.name}</strong> · ${t.title}</footer>
+              </blockquote>`)
+            .join('');
+
+          document.getElementById('locations').innerHTML = locations
+            .map((l) => `
+              <div class="card">
+                <h3>${l.city}</h3>
+                <p>${l.type}</p>
+                <small>${l.hours}</small>
+              </div>`)
+            .join('');
+
+          document.getElementById('contact').textContent = `${contact.address} · ${contact.phone} · ${contact.email}`;
+        })
+        .catch(() => {
+          document.getElementById('brand-name').textContent = 'Unable to load brand data.';
+        });
+    </script>
+  </body>
+</html>
